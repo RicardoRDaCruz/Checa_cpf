@@ -15,7 +15,7 @@ def checa_cpf(request, value):
     if str(result) == 'None':
         return JsonResponse({'message':'INVALID'})
 
-    f = open('../blacklist.txt', 'r') #Abertura do documento de blacklist.txt, que deve estar na pasta um nível acima do projeto
+    f = open('blacklist.txt', 'r') #Abertura do documento de blacklist.txt, que deve estar na pasta do projeto
     file_content = f.read()
     lista_cpf = []
     cpf=''
